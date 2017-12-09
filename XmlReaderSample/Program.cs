@@ -10,9 +10,11 @@ namespace XmlReaderSample
     {
         static void Main(string[] args)
         {
-            var sampleParser = new XmlSampleParser();
-
-            sampleParser.Dump(args[0]);
+            if (args.Length > 0)
+            {
+                var sampleParser = new XmlSampleParser();
+                sampleParser.Dump(args[0]);
+            }
         }
     }
 }
